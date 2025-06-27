@@ -1,0 +1,68 @@
+/* Add these animations to your App.css file */
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes flash {
+  0%, 100% { 
+    opacity: 1; 
+  }
+  50% { 
+    opacity: 0.7; 
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { 
+    transform: scale(1);
+    box-shadow: 0 0 20px #dc2626aa;
+  }
+  50% { 
+    transform: scale(1.02);
+    box-shadow: 0 0 30px #dc2626cc;
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.high-confidence-card {
+  animation: pulse 2s infinite;
+}
+
+.notification-badge {
+  animation: bounce 2s infinite;
+}/* src/App.css */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #0f172a;
+  color: #f1f5f9;
+}
+
+button, select {
+  cursor: pointer;
+}
+
+select {
+  background-color: white;
+  color: black;
+}
